@@ -1,42 +1,50 @@
-.hole {
-  background: url("/hole.png") no-repeat center/contain;
-}
-
-.mole {
-  background-image: url("/mole.png");
+* {
+  box-sizing: border-box;
 }
 
 body {
+  margin: 0;
+  font-family: Arial, sans-serif;
   background-color: #f8f9fa;
+  min-height: 100vh;
 }
 
 .holes-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-gap: 20px;
-  justify-content: center;
-  margin: 30px auto;
+  display: grid !important;
+  grid-template-columns: repeat(3, 100px) !important;
+  grid-gap: 20px !important;
+  justify-content: center !important;
+  margin: 30px auto !important;
+  padding: 0 !important;
+  list-style: none !important;
 }
 
 .hole {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  cursor: pointer;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100px !important;
+  height: 100px !important;
+  background: url("/hole.png") no-repeat center/contain !important;
+  background-size: 90% !important;
+  position: relative !important;
+  cursor: pointer !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  margin: 0 !important;
 }
 
-.mole {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70px;
-  height: 70px;
+.hole .mole {
+  position: absolute !important;
+  bottom: 8px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 65px !important;
+  height: 65px !important;
+  background: url("/mole.png") center/contain no-repeat !important;
+  background-size: contain !important;
+  pointer-events: none !important;
 }
 
 .welcome {
   max-width: 500px;
   margin: 0 auto;
+  padding: 20px;
 }

@@ -7,7 +7,7 @@ export default function App() {
   const { isPlaying } = useContext(GameContext);
 
   return (
-    <div className="container text-center mt-5">
+    <div className="container-fluid p-0 text-center mt-5">
       {isPlaying ? <GameBoard /> : <Welcome />}
     </div>
   );

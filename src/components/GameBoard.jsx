@@ -7,12 +7,12 @@ export default function GameBoard() {
   return (
     <div>
       <div className="mb-4">
-        <h2>Score: {score}</h2>
-        <button className="btn btn-warning" onClick={restart}>
+        <h2 className="display-6">Score: {score}</h2>
+        <button className="btn btn-warning btn-lg" onClick={restart}>
           Restart
         </button>
       </div>
-      <div className="holes=grid">
+      <div className="holes-grid">
         {Array.from({ length: 9 }, (_, i) => (
           <Hole key={i} index={i} />
         ))}
